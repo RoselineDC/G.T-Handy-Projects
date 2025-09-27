@@ -49,7 +49,7 @@
     color: var(--black);
     cursor: pointer;
     text-align: center;
-    
+
 
     &:hover {
         background: var(--black);
@@ -77,6 +77,11 @@ html {
         border-radius: 5rem;
     }
 
+}
+
+// section styles
+section {
+    padding: 5rem 10%;
 }
 
 .btn {
@@ -116,7 +121,7 @@ html {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    text-decoration: none;
+
 
 
     .logo {
@@ -196,21 +201,42 @@ html {
     .header {
         padding: 1.5rem 2rem;
     }
+
+    section {
+        padding: 3rem 10%;
+    }
+
 }
 
 @media (max-width: 768px) {
     .header {
         .search-form {
-          width: 90%;   
+            width: 90%;
         }
-        
+
+    }
+    .home .slide{
+        justify-self: center;
+
+        .content{
+            text-align: center;
+
+            h3 {
+                font-size: 3rem;
+            }
+        }
     }
 }
 
 @media (max-width: 991px) {
-    .html {
+    html {
         font-size: 55%;
     }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
 
     .header {
         #menu-btn {
@@ -267,14 +293,15 @@ html {
         display: block;
     }
 
-    #close-contact-info{
+    #close-contact-info {
         position: absolute;
-        top: 1rem; right: 1.5rem;
+        top: 1rem;
+        right: 1.5rem;
         cursor: pointer;
         color: var(--black);
         font-size: 4rem;
 
-        &:hover{
+        &:hover {
             transform: rotate(90deg);
             color: var(--blue);
         }
@@ -282,17 +309,21 @@ html {
 
     .info {
         padding: 2rem 0;
+
         i {
             @include iconBox();
             margin-bottom: .5rem;
         }
+
         h3 {
             @include titleText(1.5rem);
-            padding: 1rem 0;            
+            padding: 1rem 0;
         }
+
         p {
             @include graphText(1.5rem);
         }
+
         a {
             @include titleText(1.5rem);
             text-decoration: none;
@@ -300,13 +331,88 @@ html {
         }
 
     }
-    .share{
+
+    .share {
         padding-top: 1rem;
         border-top: var(--border);
         margin-top: 1rem;
-        a{
+
+        a {
             @include iconBox();
-            margin:0 .3rem;
+            margin: 0 .3rem;
         }
+    }
+}
+
+// home section
+.home {
+    padding: 1.5rem;
+
+    .slide {
+        min-height: 60rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-size: cover !important;
+        background-position: center !important;
+        // background-repeat: no-repeat !important;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, var(--white), transparent);
+            opacity: .7;
+        }
+
+        .content {
+            width: 50rem;
+            position: relative;
+        }
+
+        h3 {
+            @include titleText(4rem);
+            text-transform: uppercase;
+        }
+
+        p {
+            @include graphText(1.9rem);
+
+            padding: 1rem 0;
+        }
+    }
+
+    // swiper navigation buttons
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: initial;
+        bottom: 0;
+        left: initial;
+        right: 0;
+        height: 3.5rem;
+        width: 7rem;
+        line-height: 7rem;
+        font-size: 3rem;
+        background: var(--white);
+        color: var(--black);
+
+        &:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 3rem;
+        color: var(--black);
+    }
+
+    .swiper-button-prev {
+        right: 7rem;
     }
 }

@@ -13,7 +13,7 @@ document.querySelector('#menu-btn').onclick = () => {
 document.querySelector('#search-btn').onclick = () => {
     searchForm.classList.toggle('active');
     navbar.classList.remove('active');
-   
+
     contactInfo.classList.remove('active');
 
 }
@@ -24,7 +24,7 @@ document.querySelector('#info-btn').onclick = () => {
 // remove contact info
 document.querySelector('#close-contact-info').onclick = () => {
     contactInfo.classList.remove('active');
-     navbar.classList.remove('active');
+    navbar.classList.remove('active');
     searchForm.classList.remove('active');
 }
 
@@ -37,3 +37,14 @@ window.onscroll = () => {
     contactInfo.classList.remove('active');
 
 }
+
+// home slider
+var swiper = new Swiper(".home-slider", {
+    loop: true,
+    grabCursor: true,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});

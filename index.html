@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/Z1jrGCEXuWq... crossorigin=" />
 
+    <!-- swiper cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -74,30 +76,28 @@
             <a href="#" class="fab fa-linkedin"></a>
         </div>
     </div>
-
-
     <!-- header section ends -->
 
     <!-- home section starts -->
 
     <section class="home" id="home">
-        <div class="home-slider">
-            <div class="w">
-                <section class="slide" style="background: url(images/img.jpg) no-repeat;">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <section class="swiper-slide slide" style="background: url(images/img.jpg) no-repeat;">
                     <div class="content">
                         <h3>Welcome to G.T Handy-Projects</h3>
                         <p>We are a team of professionals who are passionate about what we do.</p>
                         <a href="#about" class="btn">get started</a>
                     </div>
                 </section>
-                <section class="slide" style="background: url(images/img1.jpg) no-repeat;">
+                <section class="swiper-slide slide" style="background: url(images/img1.jpg) no-repeat;">
                     <div class="content">
                         <h3>We provide best services</h3>
                         <p>We are the best at our business with a focus on exceeding our Clients Expectations</p>
                         <a href="#services" class="btn">read more</a>
                     </div>
                 </section>
-                <section class="slide" style="background: url(images/img2.jpg) no-repeat;">
+                <section class="swiper-slide slide" style="background: url(images/img2.jpg) no-repeat;">
                     <div class="content">
                         <h3>Your satisfaction is our priority</h3>
                         <p>We are committed to providing our clients with exceptional service while
@@ -105,15 +105,20 @@
                         <a href="#contact" class="btn">contact us</a>
                     </div>
                 </section>
-                
-
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
 
         </div>
 
     </section>
 
     <!-- home section ends -->
+
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <!-- custom js -->
     <script src="js/script.js"></script>
 
