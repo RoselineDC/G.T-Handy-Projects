@@ -484,3 +484,38 @@ section {
         }
     }
 }
+
+// services section
+.services {
+    background: var(--light-bg);
+    .box-container {
+        @include grid(25rem);
+
+        .box {
+            background: var(--light-bg);
+            padding: 3rem;
+            text-align: center;
+            border: var(--border);
+            box-shadow: var(--box-shadow);
+
+
+            &:hover  img{
+                transform: translateY(-1rem);
+            }
+
+            img {
+                height: 7rem;
+                margin-bottom: .5rem;
+            }
+
+            h3 {
+                @include titleText(1.7rem);
+                padding: 1rem 0;
+            }
+
+            p {
+                @include graphText(1.2rem);
+            }
+        }
+    }
+}

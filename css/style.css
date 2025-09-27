@@ -392,6 +392,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 2rem;
+  align-items: flex-end;
 }
 .about .box-container .box {
   background: var(--light-bg);
@@ -424,6 +425,39 @@ section {
   color: var(--light-color);
   line-height: 1.5;
   padding-top: 0.5rem;
+}
+
+.services {
+  background: var(--light-bg);
+}
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+.services .box-container .box {
+  background: var(--light-bg);
+  padding: 3rem;
+  text-align: center;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+}
+.services .box-container .box:hover img {
+  transform: translateY(-1rem);
+}
+.services .box-container .box img {
+  height: 7rem;
+  margin-bottom: 0.5rem;
+}
+.services .box-container .box h3 {
+  font-size: 1.7rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+.services .box-container .box p {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=style.css.map */
