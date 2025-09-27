@@ -84,6 +84,13 @@ section {
     padding: 5rem 10%;
 }
 
+// headings 
+.heading {
+  margin-bottom: 3rem;
+  @include titleText(3rem);
+  padding-left: 1rem;
+  border-left: .4rem solid var(--blue);
+}
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -93,6 +100,7 @@ section {
     cursor: pointer;
     font-size: 1.7rem;
     text-transform: uppercase;
+    text-decoration: none;
 
 
     &:hover {
@@ -414,5 +422,39 @@ section {
 
     .swiper-button-prev {
         right: 7rem;
+    }
+}
+
+// about section
+.about {
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 3rem;
+        
+        .video{
+            flex: 1 1 41rem;
+            video{
+                width: 100%;
+            }
+
+        }
+        .content{
+            flex: 1 1 41rem;
+
+            h3{
+                @include titleText(3rem);
+            }
+
+            p{
+                @include graphText(1.5rem);
+                padding: 1rem 0;
+            }
+
+            .btn{
+                margin-top: 2rem;
+            }
+        }
     }
 }
