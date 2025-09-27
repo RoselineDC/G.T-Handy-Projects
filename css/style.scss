@@ -452,8 +452,33 @@ section {
                 padding: 1rem 0;
             }
 
-            .btn{
-                margin-top: 2rem;
+            // .btn{
+            //     margin-top: 2rem;
+            // }
+        }
+    }
+    .box-container{
+        margin-top: 3rem;
+        @include grid(16rem);
+        .box{
+            background: var(--light-bg);
+            padding: 0.2rem 1rem;
+            text-align: center;
+           
+
+            i{
+                @include iconBox();
+                margin-bottom: 1rem;
+            }
+
+            h3{
+                @include titleText(2.5rem);
+                // padding: 1rem 0;
+            }
+
+            p{
+                @include graphText(1.5rem);
+                padding-top: .5rem;
             }
         }
     }
