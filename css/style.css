@@ -460,4 +460,58 @@ section {
   line-height: 1.5;
 }
 
+.projects {
+  background: var(--black);
+}
+.projects .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.projects .box-container .heading {
+  color: var(--white);
+}
+.projects .box-container .box {
+  cursor: initial;
+  text-decoration: none;
+}
+.projects .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+.projects .box-container .image {
+  height: 40rem;
+  overflow: hidden;
+}
+.projects .box-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.projects .box-container .content {
+  display: flex;
+  background: var(--white);
+  justify-content: space-between;
+}
+.projects .box-container .content .info {
+  padding: 0.2rem 1rem;
+}
+.projects .box-container .content .info h3 {
+  font-size: 1.7rem;
+  color: var(--black);
+}
+.projects .box-container .content .info p {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  line-height: 1.5;
+}
+.projects .box-container .content i {
+  width: 8.5rem;
+  font-size: 3rem;
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+  line-height: 8.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

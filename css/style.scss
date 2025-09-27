@@ -519,3 +519,69 @@ section {
         }
     }
 }
+
+// PROJECTS section
+.projects {
+    background: var(--black);
+    .box-container {
+        @include grid(30rem);
+
+        .heading {
+            color: var(--white);
+        }
+
+        .box {
+            cursor: initial;
+            text-decoration: none;
+
+            &:hover .image img {
+                transform: scale(1.1);
+            }
+        }
+        .image {
+            height: 40rem;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                // transition: all .3s linear;
+            }
+
+        }
+
+        .content {
+           display: flex;
+        //    gap: .5rem;
+           background: var(--white);
+           justify-content: space-between;
+
+           .info {
+            padding: .2rem 1rem;
+
+            h3 {
+                @include titleText(1.7rem);
+                // padding-bottom: .5rem;
+            }
+
+            p {
+                @include graphText(1.2rem);
+            }
+           
+           }
+           i{
+            width:8.5rem;
+            font-size: 3rem;
+            background: var(--blue);
+            color: var(--white);
+            cursor: pointer;
+            text-align: center;
+            line-height: 8.5rem;
+
+           }
+          
+        }
+    }
+
+}
