@@ -71,3 +71,27 @@ var swiper = new Swiper(".reviews-slider", {
     },
 });
 
+
+// slider 
+// revies 
+
+var swiper = new Swiper(".logo-slider", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20,
+    breakpoints: {
+        450: {
+            slidesPerView: 2,
+        },
+        640: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 4,
+        },
+        1000: {
+            slidesPerView: 5,
+        },
+    },
+});
+

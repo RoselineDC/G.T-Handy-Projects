@@ -16,7 +16,6 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  transition: all 0.2s linear;
 }
 
 html {
@@ -197,6 +196,7 @@ section {
     border-top: var(--border);
     border-bottom: var(--border);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
   }
   .header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -398,6 +398,7 @@ section {
   background: var(--light-bg);
   padding: 0.2rem 1rem;
   text-align: center;
+  transition: 0.2s linear;
 }
 .about .box-container .box i {
   height: 5rem;
@@ -441,6 +442,7 @@ section {
   text-align: center;
   border: var(--border);
   box-shadow: var(--box-shadow);
+  transition: 0.2s linear;
 }
 .services .box-container .box:hover img {
   transform: translateY(-1rem);
@@ -552,6 +554,73 @@ section {
   padding-top: 0.5rem;
 }
 .reviews .slide .user .stars i {
+  color: var(--blue);
+}
+
+.contact {
+  background: var(--black);
+}
+.contact .heading {
+  font-size: 3rem;
+  color: var(--black);
+  color: var(--white);
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact .row .map {
+  flex: 1 1 41rem;
+  width: 100%;
+}
+.contact .row form {
+  flex: 1 1 41rem;
+  background: var(--light-bg);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+.contact .row form h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
+.contact .row form .box {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  border-bottom: var(--border);
+  width: 100%;
+  margin: 0.7rem 0;
+}
+.contact .row form .box:focus {
+  border-color: var(--blue);
+}
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.logo-container {
+  text-align: center;
+}
+.logo-container img {
+  height: 10rem;
+  pointer-events: none;
+}
+
+.footer {
+  text-align: center;
+}
+.footer .links .btn {
+  margin: 1rem;
+}
+.footer .credit {
+  font-size: 2rem;
+  color: var(--black);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+.footer span {
   color: var(--blue);
 }
 

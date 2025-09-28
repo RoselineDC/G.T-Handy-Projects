@@ -19,7 +19,7 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    transition: all .2s linear;
+    // transition: .2s linear;
 }
 
 @mixin grid($val) {
@@ -262,6 +262,7 @@ section {
             border-top: var(--border);
             border-bottom: var(--border);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: .2s linear;
 
             &.active {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -281,7 +282,9 @@ section {
         font-size: 50%;
     }
 
+
 }
+
 
 // contact section
 .contact-info {
@@ -471,6 +474,8 @@ section {
             background: var(--light-bg);
             padding: 0.2rem 1rem;
             text-align: center;
+            transition: .2s linear;
+
 
 
             i {
@@ -504,6 +509,8 @@ section {
             text-align: center;
             border: var(--border);
             box-shadow: var(--box-shadow);
+            transition: .2s linear;
+
 
 
             &:hover img {
@@ -649,4 +656,92 @@ section {
             }
         }
     }
+}
+
+
+// contact section
+.contact {
+    background: var(--black);
+
+    .heading {
+        @include titleText(3rem);
+        color: var(--white);
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .map {
+            flex: 1 1 41rem;
+            width: 100%;
+
+        }
+
+        form {
+            flex: 1 1 41rem;
+            background: var(--light-bg);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+
+            h3 {
+                @include titleText(2rem);
+
+
+            }
+
+            .box {
+                padding: 1.5rem;
+                font-size: 1.5rem;
+                color: var(--light-color);
+
+                border-bottom: var(--border);
+                width: 100%;
+                margin: .7rem 0;
+
+                &:focus {
+                    border-color: var(--blue);
+                }
+
+            }
+
+            textarea {
+                height: 15rem;
+                resize: none;
+            }
+
+        }
+
+    }
+}
+
+// logos
+.logo-container{
+   text-align: center;
+   
+   img{
+     height: 10rem;
+     pointer-events: none;
+
+   }
+}
+
+// footer section
+.footer {
+    text-align: center;
+
+    .links .btn {
+        margin: 1rem;
+    }
+
+    .credit {
+        @include titleText(2rem);
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+    span {
+        color: var(--blue);
+    }
+
 }
