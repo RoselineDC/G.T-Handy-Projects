@@ -514,41 +514,14 @@ section {
   line-height: 8.5rem;
 }
 
-.reviews {
-  padding: 4rem 2rem;
-  background: var(--white);
-}
-.reviews .heading {
-  font-size: 3rem;
-  color: var(--black);
-  text-align: center;
-  margin-bottom: 4rem;
-  color: var(--black);
-}
-.reviews .reviews-slider {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-.reviews .w {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-.reviews .w:hover {
-  transform: translateY(-5px);
-}
 .reviews .slide p {
-  font-size: 1.5rem;
-  color: var(--light-color);
-  line-height: 1.5;
   padding: 1.5rem;
   background: var(--light-bg);
   position: relative;
-  margin-bottom: 3rem;
-  border-radius: 1rem;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 1.5;
 }
 .reviews .slide p::before {
   content: "";
@@ -560,25 +533,25 @@ section {
   background: var(--light-bg);
   transform: rotate(45deg);
 }
-.reviews .user {
+.reviews .slide .user {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin-top: 1.5rem;
 }
-.reviews .user img {
-  height: 7rem;
-  width: 7rem;
+.reviews .slide .user img {
+  height: 10rem;
+  width: 10rem;
   border-radius: 50%;
-  object-fit: cover;
-  border: 0.2rem solid var(--blue);
 }
-.reviews .user .user-info h3 {
-  font-size: 1.8rem;
+.reviews .slide .user h3 {
+  font-size: 2rem;
   color: var(--black);
-  margin-bottom: 0.5rem;
 }
-.reviews .user .user-info .stars i {
-  font-size: 1.6rem;
+.reviews .slide .user .stars {
+  padding-top: 0.5rem;
+}
+.reviews .slide .user .stars i {
   color: var(--blue);
 }
 

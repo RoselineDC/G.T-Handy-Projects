@@ -48,3 +48,26 @@ var swiper = new Swiper(".home-slider", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+// revies 
+
+var swiper = new Swiper(".reviews-slider", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        640: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        },
+    },
+});
+
