@@ -585,3 +585,85 @@ section {
     }
 
 }
+
+// review section
+
+.reviews {
+    padding: 4rem 2rem;
+    background: var(--white);
+
+    .heading {
+        @include titleText(3rem);
+        text-align: center;
+        margin-bottom: 4rem;
+        color: var(--black);
+    }
+
+    .reviews-slider {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    .w {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    .slide {
+        p {
+            @include graphText(1.5rem);
+            padding: 1.5rem;
+            background: var(--light-bg);
+            position: relative;
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -1rem;
+                left: 2rem;
+                height: 2rem;
+                width: 2rem;
+                background: var(--light-bg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        img {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: .2rem solid var(--blue);
+        }
+
+        .user-info {
+            h3 {
+                @include titleText(1.8rem);
+                margin-bottom: .5rem;
+            }
+
+            .stars {
+                i {
+                    font-size: 1.6rem;
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+}
